@@ -227,6 +227,22 @@
       --theme-footer-text-color: #212121;
       --theme-footer-link-color: #212121;
     }
+
+    /* Fix navigation to display all items horizontally */
+    .argyle-navlinks2-bar .theme-navlinks2 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 8px;
+    }
+    .argyle-navlinks2-bar .theme-navlinks2-item-wrap {
+      display: inline-flex !important;
+      flex-shrink: 0;
+    }
+    .flex-none.hidden-xs-down[data-overflow-nav-target="menuContainer"] {
+      display: none !important;
+    }
   </style>
 
   
@@ -569,8 +585,7 @@
       "
     >
       <img
-        src="https://spaces-cdn.owlstown.com/blobs/hivg4awnp4aa54y03920yskhxpzf"
-        srcset="https://spaces-cdn.owlstown.com/blobs/hivg4awnp4aa54y03920yskhxpzf 1x, https://spaces-cdn.owlstown.com/blobs/8vjqbat7vppy66738d3q0xq8j734 2x"
+        src="profile-photo.jpg"
         style="
           object-fit: cover;
           position: absolute;

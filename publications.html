@@ -227,6 +227,56 @@
       --theme-footer-text-color: #212121;
       --theme-footer-link-color: #212121;
     }
+
+    /* Fix navigation to display all items horizontally */
+    .argyle-navlinks2-bar .theme-navlinks2 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 8px;
+    }
+    .argyle-navlinks2-bar .theme-navlinks2-item-wrap {
+      display: inline-flex !important;
+      flex-shrink: 0;
+    }
+    .flex-none.hidden-xs-down[data-overflow-nav-target="menuContainer"] {
+      display: none !important;
+    }
+
+    /* Collapsible abstract styles */
+    .abstract-toggle {
+      cursor: pointer;
+      color: var(--theme-link-color);
+      font-size: 0.9em;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 8px;
+      user-select: none;
+    }
+    .abstract-toggle:hover {
+      text-decoration: underline;
+    }
+    .abstract-toggle .arrow {
+      transition: transform 0.2s ease;
+      display: inline-block;
+    }
+    .abstract-toggle.expanded .arrow {
+      transform: rotate(90deg);
+    }
+    .abstract-content {
+      display: none;
+      margin-top: 12px;
+      padding: 12px;
+      background-color: #f8f8f8;
+      border-left: 3px solid var(--theme-link-color);
+      font-size: 0.95em;
+      line-height: 1.6;
+    }
+    .abstract-content.show {
+      display: block;
+    }
   </style>
 
   
@@ -569,8 +619,7 @@
       "
     >
       <img
-        src="https://spaces-cdn.owlstown.com/blobs/hivg4awnp4aa54y03920yskhxpzf"
-        srcset="https://spaces-cdn.owlstown.com/blobs/hivg4awnp4aa54y03920yskhxpzf 1x, https://spaces-cdn.owlstown.com/blobs/8vjqbat7vppy66738d3q0xq8j734 2x"
+        src="profile-photo.jpg"
         style="
           object-fit: cover;
           position: absolute;
@@ -700,9 +749,12 @@
       <p class="blt-p blt-color-b2">
         Journal of Public Economics, 2023
       </p>
-      <p class="blt-p" style="margin-top: 12px;">
+      <div class="abstract-toggle" onclick="toggleAbstract(this)">
+        <span class="arrow">&#9654;</span> Abstract
+      </div>
+      <div class="abstract-content">
         This paper examines whether brief media exposure affects political attitudes using data from the 2013 Italian election coinciding with Pope Benedict XVI's resignation. The temporary reduction in TV coverage of politician Berlusconi influenced voter behavior toward internet-based political news sources.
-      </p>
+      </div>
     </div>
   </div>
   <hr class="space-md">
@@ -724,9 +776,12 @@
       <p class="blt-p">
         <b>Giulia Caprini</b>
       </p>
-      <p class="blt-p" style="margin-top: 12px;">
+      <div class="abstract-toggle" onclick="toggleAbstract(this)">
+        <span class="arrow">&#9654;</span> Abstract
+      </div>
+      <div class="abstract-content">
         This paper analyzes approximately 300,000 photos from US news in 2020 using visual vocabulary and dictionary approaches. The findings show that media imagery is politically partisan and polarizing, and that partisan images influence reader opinions even when accompanying identical text. News' visual bias increases polarization, yet current fact-checking focuses primarily on text.
-      </p>
+      </div>
     </div>
   </div>
   <hr class="space-md">
@@ -742,9 +797,12 @@
         The Noise Floor: Effort, Innovation, and Screening under AI-Mediated Peer Review
       </p>
       <hr class="space-4">
-      <p class="blt-p" style="margin-top: 12px;">
+      <div class="abstract-toggle" onclick="toggleAbstract(this)">
+        <span class="arrow">&#9654;</span> Abstract
+      </div>
+      <div class="abstract-content">
         This project integrates LLMs into peer review and models screening under informed vs. uninformed review. The key concept is the "Noise Floor"—the irreducible rejection probability for high-quality work under uninformed review.
-      </p>
+      </div>
     </div>
   </div>
   <hr class="space-md">
@@ -757,9 +815,12 @@
         Strategic Storytelling
       </p>
       <hr class="space-4">
-      <p class="blt-p" style="margin-top: 12px;">
+      <div class="abstract-toggle" onclick="toggleAbstract(this)">
+        <span class="arrow">&#9654;</span> Abstract
+      </div>
+      <div class="abstract-content">
         This research develops a framework for measuring "deceptiveness" as semantic distance between article previews and full content. Using a dataset of 200,000+ articles from 22 major US outlets (2020), it employs LLMs and vision models to identify "Trojan facts"—peripheral accurate facts strategically emphasized.
-      </p>
+      </div>
     </div>
   </div>
   <hr class="space-md">
@@ -869,6 +930,13 @@
 
   </div>
 
+<script>
+  function toggleAbstract(element) {
+    element.classList.toggle('expanded');
+    var content = element.nextElementSibling;
+    content.classList.toggle('show');
+  }
+</script>
 <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // These variables are global so that the StatCounter script can access them.
     var sc_project=12248062;
