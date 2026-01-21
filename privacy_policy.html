@@ -227,6 +227,39 @@
       --theme-footer-text-color: #212121;
       --theme-footer-link-color: #212121;
     }
+
+    /* Fix navigation to display all items horizontally */
+    .argyle-navlinks2-bar .theme-navlinks2 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 8px;
+    }
+    .argyle-navlinks2-bar .theme-navlinks2-item-wrap {
+      display: inline-flex !important;
+      flex-shrink: 0;
+    }
+    .flex-none.hidden-xs-down[data-overflow-nav-target="menuContainer"] {
+      display: none !important;
+    }
+
+    /* Enlarge profile picture 1.5x */
+    .argyle-site-picture-frame {
+      max-width: 300px;
+    }
+
+    /* Lift profile picture to overlap with banner */
+    .argyle-sidebar {
+      margin-top: -80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Add shadow to profile picture for better visual separation */
+    .argyle-sidebar .theme-site-avatar-picture {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
   </style>
 
   
@@ -257,12 +290,12 @@
               data-site-editable-id="site_title"
             >
               <h1>
-                <a href="indexf2e5.html?_x_tr_hl&amp;_x_tr_sl=auto&amp;_x_tr_tl=aa">Giulia Caprini</a>
+                <a href="index.html">Giulia Caprini</a>
               </h1>
             </div>
             <div class="flex-0" style="width: 16px"></div>
 
-            
+
   <div
     class="flex-1 flex-row"
     data-site-editable-id="navpages"
@@ -279,31 +312,36 @@
   data-site-editable-id="navpages"
 >
     <div class="theme-navlinks2-item-wrap">
-
       <div class="theme-navlinks2-item" data-controller="toggle">
-        <a class="theme-navlinks2-item-link" href="indexf2e5.html?_x_tr_hl&amp;_x_tr_sl=auto&amp;_x_tr_tl=aa">Home</a>
-</div>
-</div>    <div class="theme-navlinks2-item-wrap">
-
+        <a class="theme-navlinks2-item-link" href="index.html">Home</a>
+      </div>
+    </div>
+    <div class="theme-navlinks2-item-wrap">
       <div class="theme-navlinks2-item" data-controller="toggle">
-        <a class="theme-navlinks2-item-link" href="publicationsf2e5.html?_x_tr_hl&amp;_x_tr_sl=auto&amp;_x_tr_tl=aa">Research</a>
-</div>
-</div>    <div class="theme-navlinks2-item-wrap">
-
+        <a class="theme-navlinks2-item-link" href="publications.html">Research</a>
+      </div>
+    </div>
+    <div class="theme-navlinks2-item-wrap">
       <div class="theme-navlinks2-item" data-controller="toggle">
         <a class="theme-navlinks2-item-link" href="courses.html">Teaching</a>
-</div>
-</div>    <div class="theme-navlinks2-item-wrap">
-
+      </div>
+    </div>
+    <div class="theme-navlinks2-item-wrap">
       <div class="theme-navlinks2-item" data-controller="toggle">
-        <a class="theme-navlinks2-item-link" href="cvf2e5.html?_x_tr_hl&amp;_x_tr_sl=auto&amp;_x_tr_tl=aa">CV</a>
-</div>
-</div>    <div class="theme-navlinks2-item-wrap">
-
+        <a class="theme-navlinks2-item-link" href="cv.html">CV</a>
+      </div>
+    </div>
+    <div class="theme-navlinks2-item-wrap">
       <div class="theme-navlinks2-item" data-controller="toggle">
-        <a class="theme-navlinks2-item-link" href="contact_formf2e5.html?_x_tr_hl&amp;_x_tr_sl=auto&amp;_x_tr_tl=aa">Contact</a>
+        <a class="theme-navlinks2-item-link" href="resources.html">Resources</a>
+      </div>
+    </div>
+    <div class="theme-navlinks2-item-wrap">
+      <div class="theme-navlinks2-item" data-controller="toggle">
+        <a class="theme-navlinks2-item-link" href="contact_form.html">Contact</a>
+      </div>
+    </div>
 </div>
-</div></div>
 
 
     </div>
@@ -364,31 +402,36 @@
   data-site-editable-id="navpages"
 >
     <div class="theme-navlinks2-item-wrap">
-
       <div class="theme-navlinks2-item" data-controller="toggle">
-        <a class="theme-navlinks2-item-link" href="indexf2e5.html?_x_tr_hl&amp;_x_tr_sl=auto&amp;_x_tr_tl=aa">Home</a>
-</div>
-</div>    <div class="theme-navlinks2-item-wrap">
-
+        <a class="theme-navlinks2-item-link" href="index.html">Home</a>
+      </div>
+    </div>
+    <div class="theme-navlinks2-item-wrap">
       <div class="theme-navlinks2-item" data-controller="toggle">
-        <a class="theme-navlinks2-item-link" href="publicationsf2e5.html?_x_tr_hl&amp;_x_tr_sl=auto&amp;_x_tr_tl=aa">Research</a>
-</div>
-</div>    <div class="theme-navlinks2-item-wrap">
-
+        <a class="theme-navlinks2-item-link" href="publications.html">Research</a>
+      </div>
+    </div>
+    <div class="theme-navlinks2-item-wrap">
       <div class="theme-navlinks2-item" data-controller="toggle">
         <a class="theme-navlinks2-item-link" href="courses.html">Teaching</a>
-</div>
-</div>    <div class="theme-navlinks2-item-wrap">
-
+      </div>
+    </div>
+    <div class="theme-navlinks2-item-wrap">
       <div class="theme-navlinks2-item" data-controller="toggle">
-        <a class="theme-navlinks2-item-link" href="cvf2e5.html?_x_tr_hl&amp;_x_tr_sl=auto&amp;_x_tr_tl=aa">CV</a>
-</div>
-</div>    <div class="theme-navlinks2-item-wrap">
-
+        <a class="theme-navlinks2-item-link" href="cv.html">CV</a>
+      </div>
+    </div>
+    <div class="theme-navlinks2-item-wrap">
       <div class="theme-navlinks2-item" data-controller="toggle">
-        <a class="theme-navlinks2-item-link" href="contact_formf2e5.html?_x_tr_hl&amp;_x_tr_sl=auto&amp;_x_tr_tl=aa">Contact</a>
+        <a class="theme-navlinks2-item-link" href="resources.html">Resources</a>
+      </div>
+    </div>
+    <div class="theme-navlinks2-item-wrap">
+      <div class="theme-navlinks2-item" data-controller="toggle">
+        <a class="theme-navlinks2-item-link" href="contact_form.html">Contact</a>
+      </div>
+    </div>
 </div>
-</div></div>
 
 
         </div>
@@ -444,31 +487,36 @@
   data-site-editable-id="navpages"
 >
     <div class="theme-navlinks2-item-wrap">
-
       <div class="theme-navlinks2-item" data-controller="toggle">
-        <a class="theme-navlinks2-item-link" href="indexf2e5.html?_x_tr_hl&amp;_x_tr_sl=auto&amp;_x_tr_tl=aa">Home</a>
-</div>
-</div>    <div class="theme-navlinks2-item-wrap">
-
+        <a class="theme-navlinks2-item-link" href="index.html">Home</a>
+      </div>
+    </div>
+    <div class="theme-navlinks2-item-wrap">
       <div class="theme-navlinks2-item" data-controller="toggle">
-        <a class="theme-navlinks2-item-link" href="publicationsf2e5.html?_x_tr_hl&amp;_x_tr_sl=auto&amp;_x_tr_tl=aa">Research</a>
-</div>
-</div>    <div class="theme-navlinks2-item-wrap">
-
+        <a class="theme-navlinks2-item-link" href="publications.html">Research</a>
+      </div>
+    </div>
+    <div class="theme-navlinks2-item-wrap">
       <div class="theme-navlinks2-item" data-controller="toggle">
         <a class="theme-navlinks2-item-link" href="courses.html">Teaching</a>
-</div>
-</div>    <div class="theme-navlinks2-item-wrap">
-
+      </div>
+    </div>
+    <div class="theme-navlinks2-item-wrap">
       <div class="theme-navlinks2-item" data-controller="toggle">
-        <a class="theme-navlinks2-item-link" href="cvf2e5.html?_x_tr_hl&amp;_x_tr_sl=auto&amp;_x_tr_tl=aa">CV</a>
-</div>
-</div>    <div class="theme-navlinks2-item-wrap">
-
+        <a class="theme-navlinks2-item-link" href="cv.html">CV</a>
+      </div>
+    </div>
+    <div class="theme-navlinks2-item-wrap">
       <div class="theme-navlinks2-item" data-controller="toggle">
-        <a class="theme-navlinks2-item-link" href="contact_formf2e5.html?_x_tr_hl&amp;_x_tr_sl=auto&amp;_x_tr_tl=aa">Contact</a>
+        <a class="theme-navlinks2-item-link" href="resources.html">Resources</a>
+      </div>
+    </div>
+    <div class="theme-navlinks2-item-wrap">
+      <div class="theme-navlinks2-item" data-controller="toggle">
+        <a class="theme-navlinks2-item-link" href="contact_form.html">Contact</a>
+      </div>
+    </div>
 </div>
-</div></div>
 
 
         </div>
@@ -486,52 +534,17 @@
 
       
 <div class="argyle-banner" style="position: relative;">
-  <picture style="  object-fit: cover;
-  position: absolute; top: 0; right: 0; bottom: 0; left: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-">
-    <source
-      srcset="https://spaces-cdn.owlstown.com/blobs/gxf8tho1a65sugz366dfrcda7bc8"
-      type="image/webp"
-    />
-    <img src="https://spaces-cdn.owlstown.com/blobs/aaecxaiqvvs0rb4i13w2rwobqje0" style="  object-fit: cover;
-  position: absolute; top: 0; right: 0; bottom: 0; left: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-" />
-  </picture>
-
-  <div
-    style="
-      position: absolute; top: 0; right: 0; bottom: 0; left: 0;
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-      backdrop-filter: blur(10px);
-    "
-  ></div>
-
-  <picture style="  object-fit: cover;
-  position: absolute; top: 0; right: 0; bottom: 0; left: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-">
-    <source media="(max-width: 200px)" srcset="https://spaces-cdn.owlstown.com/blobs/33y594cde97x75rhxru84ak8atp6 1x, https://spaces-cdn.owlstown.com/blobs/c6peswysxggxhqgoxm4setgq3ki5 2x" />
-    <source media="(max-width: 400px)" srcset="https://spaces-cdn.owlstown.com/blobs/c6peswysxggxhqgoxm4setgq3ki5 1x, https://spaces-cdn.owlstown.com/blobs/npq1l35maetm2teq0opxmu124peb 2x" />
-    <source media="(max-width: 800px)" srcset="https://spaces-cdn.owlstown.com/blobs/npq1l35maetm2teq0opxmu124peb 1x, https://spaces-cdn.owlstown.com/blobs/pxwtm6gfikydg0suhgjqf2xop6tc 2x" />
-    <img style="  object-fit: cover;
-  position: absolute; top: 0; right: 0; bottom: 0; left: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-" src="https://spaces-cdn.owlstown.com/blobs/uwcjg2ryooqwwl8qekhnwtmio4vs" />
-</picture>
-
-  
+  <img src="banner.jpg" style="
+    object-fit: cover;
+    object-position: center center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  " />
 </div>
 
     <main class="argyle-main">
@@ -551,8 +564,7 @@
       "
     >
       <img
-        src="https://spaces-cdn.owlstown.com/blobs/hivg4awnp4aa54y03920yskhxpzf"
-        srcset="https://spaces-cdn.owlstown.com/blobs/hivg4awnp4aa54y03920yskhxpzf 1x, https://spaces-cdn.owlstown.com/blobs/8vjqbat7vppy66738d3q0xq8j734 2x"
+        src="profile-photo.jpg"
         style="
           object-fit: cover;
           position: absolute;
