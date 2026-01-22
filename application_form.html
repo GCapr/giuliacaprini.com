@@ -735,16 +735,17 @@
     font-size: 1.1em;
     font-weight: 600;
     color: #fff;
-    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    background: #f3a228;
     border: none;
     border-radius: 12px;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+    box-shadow: 0 2px 8px rgba(173, 88, 3, 0.829);
     transition: all 0.3s ease;
   }
   .ra-form .submit-btn:hover {
+    background: #e8ca78;
+    box-shadow: 0 4px 12px rgba(235, 208, 89, 0.749);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
   }
   .ra-form .unavailable {
     color: #999;
@@ -841,10 +842,7 @@
           <textarea id="ra_goals" name="ra_goals" required></textarea>
         </div>
 
-        <div class="field-group">
-          <label class="required" for="career_goal">What is your career orientation? (e.g. academia, work for a ONG, startup, etc. etc.)?</label>
-          <textarea id="career_goal" name="career_goal" required></textarea>
-        </div>
+
 
         <div class="field-group">
           <label class="required">How many hours per week can you commit?</label>
@@ -967,7 +965,7 @@
       <div style="text-align: center; margin-top: 32px;">
         <button type="submit" class="submit-btn">
           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" style="fill: currentColor;"><path d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z"/></svg>
-          Submit Application
+          Send
         </button>
       </div>
     </form>
