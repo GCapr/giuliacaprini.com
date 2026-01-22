@@ -246,7 +246,7 @@
 
     /* Enlarge profile picture */
     .argyle-site-picture-frame {
-      max-width: 507px;
+      max-width: 760px;
     }
 
     /* Lift profile picture to overlap with banner */
@@ -637,12 +637,17 @@
 
   <style>
     .resource-item {
-      border: 1px solid #e0e0e0;
+      border: 2px solid #f3a228;
       border-radius: 8px;
       margin-bottom: 12px;
+      background: #fff;
+      transition: all 0.3s ease;
+    }
+    .resource-item:hover {
+      background: #fef9f0;
     }
     .resource-item summary {
-      padding: 16px;
+      padding: 12px 24px;
       cursor: pointer;
       list-style: none;
       display: flex;
@@ -654,7 +659,7 @@
     }
     .resource-item summary::before {
       content: '';
-      border: solid currentColor;
+      border: solid #f3a228;
       border-width: 0 2px 2px 0;
       display: inline-block;
       padding: 4px;
@@ -666,10 +671,11 @@
       transform: rotate(45deg);
     }
     .resource-item .resource-content {
-      padding: 0 16px 16px 40px;
+      padding: 0 24px 16px 48px;
     }
     .resource-item summary .resource-title {
-      font-weight: bold;
+      font-weight: 600;
+      color: #f3a228;
     }
   </style>
 
