@@ -635,92 +635,123 @@
 
   </div>
 
+  <style>
+    .resource-item {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+    .resource-item summary {
+      padding: 16px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .resource-item summary::-webkit-details-marker {
+      display: none;
+    }
+    .resource-item summary::before {
+      content: '';
+      border: solid currentColor;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 4px;
+      transform: rotate(-45deg);
+      transition: transform 0.2s;
+      flex-shrink: 0;
+    }
+    .resource-item[open] summary::before {
+      transform: rotate(45deg);
+    }
+    .resource-item .resource-content {
+      padding: 0 16px 16px 40px;
+    }
+    .resource-item summary .resource-title {
+      font-weight: bold;
+    }
+  </style>
+
   <div data-site-editable-id="resources">
     <div class="theme-content-body">
 
 <!-- Learning & Study Tips -->
 <h2 class="blt-h2 blt-weight-bold" style="margin-bottom: 24px;">Learning & Study Tips</h2>
 
-          <div class="row">
-      <div class="col-xs-12">
-        <p class="blt-h4 blt-weight-bold">
-          <a href="https://youtu.be/zjkBMFhNj_g" target="_blank">Are You Studying Math All Wrong?</a>
-        </p>
-          <p class="blt-p">
-           In high school I studied ancient Greek and Latin, and I was told I was "good". So when later on I transitioned to quantitative subjects, I adopted the same study method (I was reading math books the way I would read a novel: going through stuff from top to bottom, and only once).But this time I struggled! Was I suddenly a "bad" student? Probably not, however, I was using the wrong approach. It took me a while to figure out what was happening, and how to improve. Luckily, you can adapt your study right away just by reading Chapter 2 of Kevin Houston's:  <a href="https://github.com/tracyqwerty/books/blob/main/2-kevin-houston-how-to-think-like-a-mathematician.pdf">"How to think like a Mathematician"</a>
-          </p>
-          <hr class="space-md">
-      </div>
-    </div>
-
+<details class="resource-item">
+  <summary>
+    <span class="blt-h4 resource-title">Are You Studying Math All Wrong?</span>
+  </summary>
+  <div class="resource-content">
+    <p class="blt-p">
+      In high school I studied ancient Greek and Latin, and I was told I was "good". So when later on I transitioned to quantitative subjects, I adopted the same study method (I was reading math books the way I would read a novel: going through stuff from top to bottom, and only once). But this time I struggled! Was I suddenly a "bad" student? Probably not, however, I was using the wrong approach. It took me a while to figure out what was happening, and how to improve. Luckily, you can adapt your study right away just by reading Chapter 2 of Kevin Houston's <a href="https://github.com/tracyqwerty/books/blob/main/2-kevin-houston-how-to-think-like-a-mathematician.pdf" target="_blank">"How to think like a Mathematician"</a>.
+    </p>
+  </div>
+</details>
 
 <!-- Machine Learning & Programming -->
 <h2 class="blt-h2 blt-weight-bold" style="margin-bottom: 24px; margin-top: 48px;">Machine Learning & Programming</h2>
 
-          <div class="row">
-      <div class="col-xs-12">
-        <p class="blt-h4 blt-weight-bold">
-          <a href="https://www.coursera.org/specializations/machine-learning-introduction" target="_blank">A video introduction to LLM by Andrej Karpathy	(Posted Nov 23, 2023)</a>
-        </p>
-          <p class="blt-p">
-            A 1 h video lecture on the functioning of LLMs from one of the greatest programmers of our time.
-          <hr class="space-md">
-      </div>
-    </div>
-          <div class="row">
-      <div class="col-xs-12">
-        <p class="blt-h4 blt-weight-bold">
-          <a href="https://zdaugherty.ccnysites.cuny.edu/teaching/m308f18/HowToThinkCh1.pdf" target="_blank">Learning Machine Learning By Yourself (at $=0)? </a>
-        </p>
-          <p class="blt-p">
-          Coursera is an online platform where you can find several courses (like EdX), and audit them for free (NOTE: you only need to pay if you want to get a certificate, so look for the "audit" button in the fineprint). I recommend the Machine Learning courses 1/2/3 by Andrew NG (founder of Coursera). In 2021, the ML course was updated and all the material is now in Python (previously in Matlab) and exercises come on Jupiter Notebooks.          </p>
-            </p>
-          <hr class="space-md">
-      </div>
-    </div>
-          <div class="row">
-      <div class="col-xs-12">
-        <p class="blt-h4 blt-weight-bold">
-          <a href="https://www.deeplearning.ai/" target="_blank">DeepLearning.AI</a>
-        </p>
-          <p class="blt-p">
-            Courses and resources for deep learning, AI, and neural networks from Andrew Ng's team.
-          </p>
-          <hr class="space-md">
-      </div>
-    </div>
+<details class="resource-item">
+  <summary>
+    <span class="blt-h4 resource-title">A video introduction to LLM by Andrej Karpathy (Posted Nov 23, 2023)</span>
+  </summary>
+  <div class="resource-content">
+    <p class="blt-p">
+      A 1 h <a href="https://youtu.be/zjkBMFhNj_g" target="_blank">video lecture</a> on the functioning of LLMs from one of the greatest programmers of our time.
+    </p>
+  </div>
+</details>
+
+<details class="resource-item">
+  <summary>
+    <span class="blt-h4 resource-title">Learning Machine Learning By Yourself (at $=0)?</span>
+  </summary>
+  <div class="resource-content">
+    <p class="blt-p">
+      <a href="https://www.coursera.org" target="_blank">Coursera</a> is an online platform where you can find several courses (like EdX), and audit them for free (NOTE: you only need to pay if you want to get a certificate, so look for the "audit" button in the fineprint). I recommend the <a href="https://www.coursera.org/specializations/machine-learning-introduction" target="_blank">Machine Learning courses 1/2/3</a> by Andrew NG (founder of Coursera). In 2021, the ML course was updated and all the material is now in Python (previously in Matlab) and exercises come on Jupiter Notebooks.
+    </p>
+  </div>
+</details>
+
+<details class="resource-item">
+  <summary>
+    <span class="blt-h4 resource-title">DeepLearning.AI</span>
+  </summary>
+  <div class="resource-content">
+    <p class="blt-p">
+      Courses and resources for deep learning, AI, and neural networks from Andrew Ng's team. Visit <a href="https://www.deeplearning.ai/" target="_blank">DeepLearning.AI</a>.
+    </p>
+  </div>
+</details>
 
 <!-- Data & Research Methods -->
 <h2 class="blt-h2 blt-weight-bold" style="margin-bottom: 24px; margin-top: 48px;">Data & Research Methods</h2>
 
-          <div class="row">
-      <div class="col-xs-12">
-        <p class="blt-h4 blt-weight-bold">
-          <a href="https://web.stanford.edu/~gentzkow/research/CodeAndData.pdf" target="_blank">Code and Data for the Social Sciences</a>
-        </p>
-          <p class="blt-p blt-color-b2">
-            Gentzkow & Shapiro 2014, Stanford
-          </p>
-          <p class="blt-p">
-            Essential guide on best practices for organizing code and data in empirical research projects.
-          </p>
-          <hr class="space-md">
-      </div>
-    </div>
-          <div class="row">
-      <div class="col-xs-12">
-        <p class="blt-h4 blt-weight-bold">
-          <a href="https://themarkup.org/levelup/2023/08/23/how-to-legally-scrape-eu-data-for-investigations" target="_blank">How to Legally Scrape EU Data for Investigations (updated legal advice as of August 2023)</a>
-        </p>
-          <p class="blt-p blt-color-b2">
-            The Markup
-          </p>
-          <p class="blt-p">
-            Guide on legal considerations and methods for web scraping in the EU context.
-          </p>
-          <hr class="space-md">
-      </div>
-    </div>
+<details class="resource-item">
+  <summary>
+    <span class="blt-h4 resource-title">Code and Data for the Social Sciences</span>
+  </summary>
+  <div class="resource-content">
+    <p class="blt-p blt-color-b2" style="margin-bottom: 8px;">Gentzkow & Shapiro 2014, Stanford</p>
+    <p class="blt-p">
+      Essential guide on best practices for organizing code and data in empirical research projects. Read the <a href="https://web.stanford.edu/~gentzkow/research/CodeAndData.pdf" target="_blank">full paper</a>.
+    </p>
+  </div>
+</details>
+
+<details class="resource-item">
+  <summary>
+    <span class="blt-h4 resource-title">How to Legally Scrape EU Data for Investigations (updated legal advice as of August 2023)</span>
+  </summary>
+  <div class="resource-content">
+    <p class="blt-p blt-color-b2" style="margin-bottom: 8px;">The Markup</p>
+    <p class="blt-p">
+      Guide on legal considerations and methods for web scraping in the EU context. Read the <a href="https://themarkup.org/levelup/2023/08/23/how-to-legally-scrape-eu-data-for-investigations" target="_blank">full article</a>.
+    </p>
+  </div>
+</details>
 
     </div>
   </div>
