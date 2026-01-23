@@ -260,6 +260,68 @@
     .argyle-sidebar .theme-site-avatar-picture {
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
+
+    /* Info-box styles for course descriptions */
+    .info-box {
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid;
+    }
+    .info-box.tip {
+      background-color: #e8f5e9;
+      border-left-color: #4caf50;
+    }
+    .info-box.warning {
+      background-color: #fff3e0;
+      border-left-color: #ff9800;
+    }
+    .info-box-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+      color: #333;
+    }
+    .info-box p {
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
+    }
+    .info-box ul {
+      margin-left: 1.25rem;
+      line-height: 1.8;
+    }
+    .info-box li {
+      margin-bottom: 0.25rem;
+    }
+
+    /* Collapsible course details */
+    .course-details {
+      margin-top: 1rem;
+    }
+    .course-details summary {
+      cursor: pointer;
+      color: var(--theme-link-color, #2563eb);
+      font-weight: 600;
+      padding: 0.5rem 0;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .course-details summary::-webkit-details-marker {
+      display: none;
+    }
+    .course-details summary::before {
+      content: "\25B6";
+      font-size: 0.7rem;
+      transition: transform 0.2s ease;
+    }
+    .course-details[open] summary::before {
+      transform: rotate(90deg);
+    }
+    .course-details-content {
+      padding-top: 1rem;
+    }
   </style>
 
   
@@ -652,8 +714,49 @@
             Spring 2026 · School of Economics, Sciences Po
           </p>
           <p class="blt-p">
-            This course teaches programming skills essential for modern economics research. The M1 module covers everything a beginner needs to jumpstart their empirical research, from data analysis, computational methods, and reproducible research practices.
+            This course teaches programming skills essential for modern economics research, covering data analysis, computational methods, and reproducible research practices.
           </p>
+
+          <details class="course-details">
+            <summary>View Course Structure (Two Parts)</summary>
+            <div class="course-details-content">
+              <div class="info-box tip">
+                <div class="info-box-title">Part 1: ProTools ER1 (M1 Course)</div>
+                <p>
+                  This first part, designed for <strong>M1 students</strong>, focuses on the <strong>foundational skills</strong> every empirical researcher needs:
+                </p>
+                <ul style="margin-bottom: 0;">
+                  <li><strong>Programming foundations:</strong> Python, Stata, and R taught in parallel — data import, cleaning, exploration, and visualization</li>
+                  <li><strong>Causal inference methods:</strong> Matching, Difference-in-Differences, Regression Discontinuity, Instrumental Variables, Synthetic Control</li>
+                  <li><strong>Estimation techniques:</strong> Standard errors, panel data methods, MLE/GMM</li>
+                  <li><strong>Research best practices:</strong> Version control with Git & GitHub, replicability standards, project organization</li>
+                  <li><strong>Machine learning & NLP:</strong> Introduction to ML for economists, history of NLP, understanding Large Language Models</li>
+                </ul>
+                <p style="margin-top: 1rem; margin-bottom: 0;">
+                  <a href="https://gcapr.github.io/Programming_for_economics_research_M1/">Access course materials here</a>. <em>Note: for Spring 2026, access is restricted to enrolled students only.</em>
+                </p>
+              </div>
+
+              <div class="info-box warning">
+                <div class="info-box-title">Part 2: ProTools ER2 (M2 Course — Coming Soon)</div>
+                <p>
+                  The second part, designed for <strong>M2 students</strong>, focuses on <strong>AI tools and cutting-edge skills</strong> for modern research:
+                </p>
+                <ul style="margin-bottom: 0;">
+                  <li><strong>Image & text analysis with LLMs:</strong> Extracting structured data from documents, PDFs, and images using AI</li>
+                  <li><strong>Local LLM deployment:</strong> Setting up LM Studio, running open-source models locally on your machine</li>
+                  <li><strong>AI coding assistants:</strong> Using Claude Code from Claude Desktop and VS Code for research workflows</li>
+                  <li><strong>Hugging Face ecosystem:</strong> Accessing models, datasets, and Spaces for research applications</li>
+                  <li><strong>API & inference services:</strong> Buying credits, managing API keys, choosing between providers (OpenAI, Anthropic, etc.)</li>
+                  <li><strong>Building AI-powered tools:</strong> Research websites, data dashboards, and automated pipelines</li>
+                  <li><strong>Prompt engineering:</strong> Advanced techniques for getting reliable outputs from LLMs</li>
+                  <li><strong>RAG & fine-tuning:</strong> Retrieval-augmented generation and model customization for domain-specific tasks</li>
+                </ul>
+                <p style="margin-top: 1rem; margin-bottom: 0; font-style: italic;">Link to Part 2 will be provided when available.</p>
+              </div>
+            </div>
+          </details>
+
           <hr class="space-md">
       </div>
     </div>
