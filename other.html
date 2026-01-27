@@ -267,6 +267,65 @@
       margin-top: 0.5rem;
       font-style: italic;
     }
+
+    /* Carousel styling */
+    .carousel {
+      position: relative;
+      max-width: 100%;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .carousel-inner {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel-item {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+    .carousel-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 4px;
+      z-index: 10;
+    }
+    .carousel-btn:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
+    .carousel-btn.prev {
+      left: 10px;
+    }
+    .carousel-btn.next {
+      right: 10px;
+    }
+    .carousel-indicators {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .carousel-indicators span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      background: #ccc;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .carousel-indicators span.active {
+      background: #666;
+    }
   </style>
 
 
@@ -651,7 +710,7 @@
   <div class="theme-content-body">
     <p class="blt-p">
       I was photographer and proud team supporter of the Italian National Team to the World Transplant Games 2013 in Durban (South Africa),
-      to the European Transplant Sport Championship 2018 in Cagliari (IT), the World Transplant Games 2019 in Newcastle (UK), and the 2024 <a href="https://www.eu-tsc.org/" target="_blank">European Transplant Games in Lisbon, Portugal</a>, where we conducted fieldwork with an amazing team of photographers and economists: <a href="https://sites.google.com/view/flaviacavallini/home?authuser=0" target="_blank">Flavia Cavallini</a> and <a href="https://it.linkedin.com/in/giuliana-ghia-794425ba" target="_blank">Giuliana Ghia</a>. You can find some pictures below
+      to the European Transplant Sport Championship 2018 in Cagliari (IT), the World Transplant Games 2019 in Newcastle (UK), and the 2024 <a href="https://www.eu-tsc.org/" target="_blank">European Transplant Games in Lisbon, Portugal</a>, where we conducted fieldwork with an amazing team: a photographer and two colleagues economists: <a href="https://sites.google.com/view/flaviacavallini/home?authuser=0" target="_blank">Flavia Cavallini</a> and <a href="https://it.linkedin.com/in/giuliana-ghia-794425ba" target="_blank">Giuliana Ghia</a>. You can find some pictures below
     </p>
 
     <hr class="space-sm">
@@ -687,11 +746,51 @@
     <hr class="space-lg">
 
     <div style="text-align: center;">
-      <img src="etdsg2024/posters.jpg" alt="European Transplant Games 2024 in Lisbon" style="max-width: 100%; height: auto; border-radius: 4px;">
+      <div class="carousel" id="etdsgCarousel">
+        <div class="carousel-inner" id="carouselInner">
+          <div class="carousel-item">
+            <img src="etdsg2024/poster.jpg" alt="European Transplant Games 2024 - Fieldwork material">
+          </div>
+          <div class="carousel-item">
+            <img src="etdsg2024/posters.jpg" alt="European Transplant Games 2024 - Fieldwork material">
+          </div>
+        </div>
+        <button class="carousel-btn prev" onclick="moveCarousel(-1)">&#10094;</button>
+        <button class="carousel-btn next" onclick="moveCarousel(1)">&#10095;</button>
+      </div>
+      <div class="carousel-indicators" id="carouselIndicators">
+        <span class="active" onclick="goToSlide(0)"></span>
+        <span onclick="goToSlide(1)"></span>
+      </div>
       <p class="photo-caption">
-        European Transplant Games 2024, Lisbon.
+        Pictures from the fieldwork material at the European Transplant Games in Lisbon, 2024.
       </p>
     </div>
+
+    <script>
+      let currentSlide = 0;
+      const totalSlides = 2;
+
+      function moveCarousel(direction) {
+        currentSlide += direction;
+        if (currentSlide < 0) currentSlide = totalSlides - 1;
+        if (currentSlide >= totalSlides) currentSlide = 0;
+        updateCarousel();
+      }
+
+      function goToSlide(index) {
+        currentSlide = index;
+        updateCarousel();
+      }
+
+      function updateCarousel() {
+        document.getElementById('carouselInner').style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+        const indicators = document.querySelectorAll('.carousel-indicators span');
+        indicators.forEach((ind, i) => {
+          ind.classList.toggle('active', i === currentSlide);
+        });
+      }
+    </script>
   </div>
 
 
