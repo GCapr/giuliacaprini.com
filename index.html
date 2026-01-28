@@ -256,12 +256,20 @@
     .trix-content {
       font-size: 1.25em;
       line-height: 1.7;
+      text-align: justify;
     }
 
     /* Even larger font on desktop/PC */
     @media (min-width: 992px) {
       .trix-content {
         font-size: 1.4em;
+      }
+
+      /* Make profile image 1.5x bigger on desktop */
+      .argyle-sidebar .argyle-site-picture-frame {
+        transform: scale(1.5);
+        transform-origin: top center;
+        margin-bottom: 120px;
       }
     }
 
