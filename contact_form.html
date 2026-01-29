@@ -265,9 +265,22 @@
     .argyle-sidebar .theme-site-avatar-picture {
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
+
+    /* Desktop profile image enlargement */
+    @media (min-width: 992px) {
+      .argyle-sidebar .argyle-site-picture-frame {
+        transform: scale(1.5);
+        transform-origin: top right;
+        margin-bottom: 200px;
+      }
+
+      .argyle-sidebar {
+        margin-top: -140px;
+      }
+    }
   </style>
 
-  
+
   <!-- Theme Javascript-->
   <script src="vite/assets/themes-BIaxqbDT.js" crossorigin="anonymous" type="module" data-turbo-track="reload" defer="defer"></script><link rel="modulepreload" href="vite/assets/lazyload.esm-BU36YZBk.js" as="script" crossorigin="anonymous" data-turbo-track="reload" defer="defer">
 
