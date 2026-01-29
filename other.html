@@ -269,7 +269,11 @@
       .argyle-sidebar .argyle-site-picture-frame {
         transform: scale(1.5);
         transform-origin: top right;
-        margin-bottom: 360px;
+      }
+
+      /* Push contact info down to account for scaled image */
+      .argyle-sidebar .argyle-site-picture-frame + [data-site-editable-id="contact"] {
+        padding-top: 120px;
       }
 
       .argyle-sidebar {
