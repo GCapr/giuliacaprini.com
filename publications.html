@@ -734,14 +734,28 @@
   <div class="row">
     <div class="col-xs-12">
       <p class="blt-h4 blt-weight-bold">
-        Strategic Storytelling
+        Deceptive News
       </p>
       <hr class="space-4">
+      <p class="blt-p">
+        with Lorenz Kipp
+      </p>
       <div class="abstract-toggle" onclick="toggleAbstract(this)">
         <span class="arrow">&#9654;</span> Abstract
       </div>
       <div class="abstract-content">
-      This paper introduces an empirical framework to measure the “deceptiveness" of news articles, defined as the semantic distance between a news article’s preview (headlines and leading images) and its full textual content. Unlike traditional measures of misinformation that rely on external truth anchors (such as in fact-checking), this metric assesses the internal coherence of a news piece, allowing for scalable, automated quantification of misleading narratives in factually accurate reporting. Using a large-scale dataset of over 200,000 online news articles from 22 major U.S. media outlets in 2020, I document systematic patterns in media deceptiveness. I employ Large Language Models (LLMs) to extract “facts” and Large Vision Models (LVMs) to analyze imagery, constructing a network-based measure of “Fact Centrality”. I explore in particular the existence and prevalence of “Trojan facts”: peripheral but accurate facts strategically emphasized in previews to distort the narrative. The empirical analysis reveals deceptiveness varies significantly across topics, outlets, and time. Specifically, politically sensitive and high-interest topics such as health and politics exhibit the highest levels of deceptiveness. I document a non-monotonic relationship between public attention and deceptiveness: while deceptive practices generally rise during high-interest periods (e.g., the 2020 Election), they decrease during periods of intense social scrutiny (e.g., the BLM protests).      </div>
+      This paper introduces an empirical framework to measure the "deceptiveness" of news articles, defined as the semantic distance between a news article's preview (headline and leading image) and its full textual content. Unlike traditional approaches to misinformation that rely on costly external truth anchors, our metric assesses the internal coherence of a news piece, enabling scalable, automated detection of misleading framing even within factually accurate reporting. Using a dataset of 20,000 online news articles from two major U.S. outlets spanning the full calendar year of 2020, we document systematic patterns in media deceptiveness. We extract structured "facts" from each article, constructing fact-level network measures of centrality and distance to the headline. We additionally identify "Trojan facts": peripheral but accurate facts, disconnected from the article's central narrative, yet strategically emphasized in the preview to shape reader inference. Our descriptive analysis reveals that deceptiveness varies significantly across topics, outlets, and time, with the less reliable outlet exhibiting systematically lower headline–body similarity. To test whether deceptiveness responds to incentives, we exploit Twitter's June 2020 introduction of a "read before you share" nudge as an exogenous shock to the verifiability of news content. Using an event-study design, we find that the less reliable outlet's deceptiveness decreased permanently after the intervention, while the more reliable outlet, already less deceptive, showed no significant change. These results are consistent with deceptiveness being a strategic editorial choice that responds to the expected probability of detection, and suggest that platform design features enhancing public scrutiny can discipline misleading framing at scale without requiring external fact-checking infrastructure.      </div>
+    </div>
+  </div>
+  <hr class="space-md">
+</div>
+
+<div>
+  <div class="row">
+    <div class="col-xs-12">
+      <p class="blt-h4 blt-weight-bold">
+        Strategic Storytelling
+      </p>
     </div>
   </div>
   <hr class="space-md">
